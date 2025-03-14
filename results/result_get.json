@@ -1,0 +1,91 @@
+[
+    {
+        "TestCase": "G1",
+        "Status": 200,
+        "Expected": 200,
+        "Pass": true,
+        "Body": [
+            {
+                "Ten": "Thuy Linh",
+                "DiaChi": "Hoa Binh",
+                "Id": 1,
+                "Email": "lyn@gmail.com"
+            },
+            {
+                "Ten": "Ngan",
+                "DiaChi": "Nam Dinh",
+                "Id": 2,
+                "Email": "Ngan@gmail.com"
+            },
+            {
+                "Ten": "Ha",
+                "DiaChi": "Ha Noi",
+                "Id": 3,
+                "Email": "ha123@gmail.com"
+            },
+            {
+                "Ten": "Quynh",
+                "DiaChi": "Ha Noi",
+                "Id": 4,
+                "Email": "Quynhne@gmail.com"
+            },
+            {
+                "Ten": "Minh",
+                "DiaChi": "Hoa Binh",
+                "Id": 5,
+                "Email": "minh@gmail.com"
+            },
+            {
+                "Ten": "Vinh",
+                "DiaChi": "Hue",
+                "Id": 6,
+                "Email": "Vin@gmail.com"
+            },
+            {
+                "Ten": "Van",
+                "DiaChi": "Da Nang",
+                "Id": 8,
+                "Email": "van111@gmail.com"
+            },
+            {
+                "Ten": "Test",
+                "DiaChi": "Ha Noi",
+                "Id": 100,
+                "Email": "test_locust@gmail.com"
+            }
+        ]
+    },
+    {
+        "TestCase": "G2",
+        "Status": 200,
+        "Expected": 200,
+        "Pass": true,
+        "Body": {
+            "Ten": "Thuy Linh",
+            "DiaChi": "Hoa Binh",
+            "Id": 1,
+            "Email": "lyn@gmail.com"
+        }
+    },
+    {
+        "TestCase": "G3",
+        "Status": 404,
+        "Expected": 404,
+        "Pass": true,
+        "Body": "{\"detail\":\"User khong ton tai\"}"
+    },
+    {
+        "TestCase": "G4",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "{\"detail\":\"Not authenticated\"}"
+    },
+    {
+        "TestCase": "G5",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "{\"detail\":\"Token không hợp lệ hoặc đã hết hạn\"}"
+    }
+]

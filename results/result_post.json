@@ -1,0 +1,56 @@
+[
+    {
+        "TestCase": "Post1",
+        "Status": 200,
+        "Expected": 200,
+        "Pass": true,
+        "Body": {
+            "Ten": "Anh",
+            "DiaChi": "Ninh Binh",
+            "Id": 7,
+            "Email": "a123@gmail.com"
+        }
+    },
+    {
+        "TestCase": "Post2",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "Not authenticated"
+    },
+    {
+        "TestCase": "Post3",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "Token không hợp lệ hoặc đã hết hạn"
+    },
+    {
+        "TestCase": "Post4",
+        "Status": 500,
+        "Expected": 400,
+        "Pass": false,
+        "Body": "Internal Server Error"
+    },
+    {
+        "TestCase": "Post5",
+        "Status": 500,
+        "Expected": 400,
+        "Pass": false,
+        "Body": "Internal Server Error"
+    },
+    {
+        "TestCase": "Post6",
+        "Status": 422,
+        "Expected": 422,
+        "Pass": true,
+        "Body": "{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"Email\"],\"msg\":\"Field required\",\"input\":{\"Id\":12,\"Ten\":\"Yen\",\"DiaChi\":\"HCM\"}}]}"
+    },
+    {
+        "TestCase": "Post7",
+        "Status": 422,
+        "Expected": 422,
+        "Pass": true,
+        "Body": "{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"DiaChi\"],\"msg\":\"Input should be a valid string\",\"input\":11111}]}"
+    }
+]

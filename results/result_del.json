@@ -1,0 +1,32 @@
+[
+    {
+        "TestCase": "Del1",
+        "Status": 200,
+        "Expected": 200,
+        "Pass": true,
+        "Body": {
+            "message": "xoa User thanh cong"
+        }
+    },
+    {
+        "TestCase": "Del2",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "Not authenticated"
+    },
+    {
+        "TestCase": "Del3",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "Token không hợp lệ hoặc đã hết hạn"
+    },
+    {
+        "TestCase": "Del4",
+        "Status": 404,
+        "Expected": 404,
+        "Pass": true,
+        "Body": "Khong tim thay user"
+    }
+]

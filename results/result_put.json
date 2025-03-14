@@ -1,0 +1,63 @@
+[
+    {
+        "TestCase": "Put1",
+        "Status": 200,
+        "Expected": 200,
+        "Pass": true,
+        "Body": {
+            "Ten": "Van",
+            "DiaChi": "Da Nang",
+            "Id": 8,
+            "Email": "van111@gmail.com"
+        }
+    },
+    {
+        "TestCase": "Put2",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "Not authenticated"
+    },
+    {
+        "TestCase": "Put3",
+        "Status": 401,
+        "Expected": 401,
+        "Pass": true,
+        "Body": "Token không hợp lệ hoặc đã hết hạn"
+    },
+    {
+        "TestCase": "Put4",
+        "Status": 404,
+        "Expected": 404,
+        "Pass": true,
+        "Body": "Khong tim thay User!!!"
+    },
+    {
+        "TestCase": "Put5",
+        "Status": 405,
+        "Expected": 405,
+        "Pass": true,
+        "Body": "{\"detail\":\"Method Not Allowed\"}"
+    },
+    {
+        "TestCase": "Put6",
+        "Status": 400,
+        "Expected": 400,
+        "Pass": true,
+        "Body": "Khong co du lieu de cap nhat"
+    },
+    {
+        "TestCase": "Put7",
+        "Status": 500,
+        "Expected": 400,
+        "Pass": false,
+        "Body": "Internal Server Error"
+    },
+    {
+        "TestCase": "Put8",
+        "Status": 422,
+        "Expected": 422,
+        "Pass": true,
+        "Body": "{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"Ten\"],\"msg\":\"Input should be a valid string\",\"input\":12345}]}"
+    }
+]
