@@ -39,12 +39,12 @@ class UserUpdate(BaseModel):
 
 # API tạo token
 @app.post("/token")
-def generate_token(login: LoginRequest):
-    if login.username == "admin" and login.password == "password":
-        token_payload = {"sub": login.username, "exp": time.time() + 3600}
+def generate_token(form_data: OAuth2PasswordRequestForm = Depends()):
+    if form_data.username == "admin" and form_data.password == "password":
+        token_payload = {"sub": form_data.username, "exp": time.time() + 3600}
         access_token = jwt.encode(token_payload, SECRET_KEY, algorithm=ALGORITHM)
         return {"access_token": access_token, "token_type": "bearer"}
-    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Sai tai khoan hoac mat khau")
+    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Sai tài khoản hoặc mật khẩu")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 def verify_token(token: str = Depends(oauth2_scheme)):
