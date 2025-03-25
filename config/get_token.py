@@ -2,7 +2,7 @@ import requests
 
 def get_token():
     try:
-        response = requests.post("http://127.0.0.1:8000/token",json={"username": "admin", "password": "password"})
+        response = requests.post("http://127.0.0.1:8000/token",data={"username": "admin", "password": "password"})
         response.raise_for_status()
         data = response.json()
         access_token = data.get("access_token", "")
