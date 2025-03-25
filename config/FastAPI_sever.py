@@ -20,8 +20,6 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 
-app = FastAPI()
-
 class LoginRequest(BaseModel):
     username: str
     password: str
